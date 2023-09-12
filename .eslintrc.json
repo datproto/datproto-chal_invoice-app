@@ -1,0 +1,16 @@
+{
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:storybook/recommended",
+    "plugin:storybook/recommended"
+  ],
+  "plugins": [
+    "simple-import-sort",
+    "tailwindcss"
+  ],
+  "rules": {
+    "simple-import-sort/imports": "error",
+    "tailwindcss/classnames-order": "error",
+    "tailwindcss/no-custom-classname": "off"
+  }
+}

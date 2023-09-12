@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-[#F8F8F8] dark:bg-clay-theme-ebony-dark
+}
+
+@layer base {
+  :root {
+    --button-padding: 18px 24px 15px 24px
+  }
+
+  button {
+    padding: var(--button-padding);
+    @apply rounded-full leading-none font-bold transition-all
+  }
+
+  input {
+    padding-top: 18px;
+    padding-left: 20px;
+    padding-bottom: 15px;
+    @apply border-2 font-bold text-clay-theme-ebony-darker w-full rounded border-gray-theme-light bg-white dark:bg-clay-theme-ebony-dark-2 focus:border-purple-theme-normal dark:border-clay-theme-ebony-normal outline-none dark:text-white
+  }
+}
+
+@layer components {
+  .heading {
+    &__l {
+      @apply font-bold text-4xl leading-8 tracking-[-1px]
+    }
+
+    &__m {
+      @apply font-bold text-2xl leading-6 tracking-[-.75px]
+    }
+
+    &__s {
+      @apply font-bold text-base leading-6 tracking-[-.25px]
+    }
+
+    &__variant {
+      @apply font-bold text-base leading-4 tracking-[.25px]
+    }
+  }
+
+  .body {
+    &__normal {
+      @apply text-sm font-medium leading-[18px] tracking-[-.1px]
+    }
+
+    &__variant {
+      @apply text-sm font-medium leading-[13px] tracking-[-.25px]
+    }
+  }
+
+  .button {
+    &__two {
+      @apply bg-purple-theme-normal hover:bg-purple-theme-light text-white
+    }
+
+    &__three {
+      @apply dark:bg-clay-theme-ebony-dark text-blue-theme-wild dark:text-gray-theme-light bg-[#F9FAFE] hover:bg-gray-theme-light dark:hover:bg-white
+    }
+
+    &__four {
+      @apply bg-[#373B53] hover:bg-clay-theme-ebony-darker dark:hover:bg-clay-theme-ebony-dark-2 text-gray-theme-normal dark:text-gray-theme-light
+    }
+
+    &__five {
+      @apply bg-red-theme-normal hover:bg-red-theme-light text-white
+    }
+
+    &__six {
+      @apply w-full text-blue-theme-wild bg-[#F9FAFE] hover:bg-gray-theme-light
+    }
+  }
+}
+
+@import 'react-datepicker/dist/react-datepicker.css';
+.react-datepicker {
+  &-wrapper {
+    .input__datepicker {
+      width: inherit;
+    }
+
+    @apply w-full
+  }
+
+  &__month {
+    &-container {
+      @apply flex flex-col gap-8
+    }
+
+    @apply flex flex-col gap-4 m-0 w-auto
+  }
+
+  &__week {
+    @apply grid grid-cols-7 grid-rows-1 gap-3
+  }
+
+  font-family: inherit;
+  @apply shadow-2xl border-0 rounded-md pt-6 pb-6 px-4 shadow-purple-theme-normal/25
+}
+
+.react-datepicker__header--custom {
+  @apply p-0 bg-white border-none
+}
+
+.react-datepicker__day {
+  &:hover {
+    @apply bg-white text-purple-theme-normal
+  }
+
+  &-name {
+    display: none;
+  }
+
+  &--outside-month {
+    @apply opacity-[.08] heading__variant
+  }
+
+  &--selected {
+    @apply bg-white text-purple-theme-normal
+  }
+
+  &--keyboard-selected {
+    @apply bg-none
+  }
+
+  @apply heading__variant w-auto
+}
