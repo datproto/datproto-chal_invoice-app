@@ -5,6 +5,8 @@ import {League_Spartan} from 'next/font/google'
 import React from 'react'
 
 import {ThemeProvider} from '@/app/theme-provider'
+import Navbar from '@/components/molecules/Navbar'
+import {ReduxProviders} from '@/redux/provider'
 
 const leagueSpartan = League_Spartan({subsets: ['latin']})
 
@@ -22,7 +24,10 @@ export default function RootLayout({
     <html lang="en">
     <body className={leagueSpartan.className}>
     <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-      {children}
+      <ReduxProviders>
+        <Navbar/>
+        {children}
+      </ReduxProviders>
     </ThemeProvider>
     </body>
     </html>

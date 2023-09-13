@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  @apply bg-[#F8F8F8] dark:bg-clay-theme-ebony-dark
+  @apply bg-[#F8F8FB] dark:bg-clay-theme-ebony-dark
 }
 
 @layer base {
@@ -49,11 +49,15 @@ body {
     }
 
     &__variant {
-      @apply text-sm font-medium leading-[13px] tracking-[-.25px]
+      @apply text-sm font-medium leading-[15px] tracking-[-.25px]
     }
   }
 
   .button {
+    &__one {
+      @apply bg-purple-theme-normal hover:bg-purple-theme-light text-white p-2 pr-6
+    }
+
     &__two {
       @apply bg-purple-theme-normal hover:bg-purple-theme-light text-white
     }
@@ -72,6 +76,12 @@ body {
 
     &__six {
       @apply w-full text-blue-theme-wild bg-[#F9FAFE] hover:bg-gray-theme-light
+    }
+  }
+
+  .input {
+    &__checkbox {
+      @apply appearance-none w-4 h-4 p-2 rounded hover:border-purple-theme-normal bg-gray-theme-light checked:bg-purple-theme-normal checked:border-purple-theme-normal border-gray-theme-light dark:bg-clay-theme-ebony-dark-2 dark:checked:bg-purple-theme-normal
     }
   }
 }

@@ -3,7 +3,7 @@ import React from 'react'
 interface IButton {
   type?: 'submit' | 'button'
   icon?: React.ReactNode
-  text: string
+  text?: string
   customClass?: string
   forwardedRef?: React.ForwardedRef<HTMLButtonElement>
   onClick?: React.MouseEventHandler<HTMLButtonElement>
@@ -11,7 +11,7 @@ interface IButton {
   childCustomClass?: string
 }
 
-const Button = ({type = 'button', icon, text, customClass, forwardedRef, onClick, childCustomClass, children}: IButton) => {
+const Button = ({type = 'button', icon, text = '', customClass, forwardedRef, onClick, childCustomClass, children}: IButton) => {
   return (
     <button type={type} className={`relative ${customClass}`} ref={forwardedRef} onClick={onClick}>
       {text}
