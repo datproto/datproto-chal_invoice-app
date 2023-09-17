@@ -1,7 +1,11 @@
 import {configureStore} from '@reduxjs/toolkit'
 
+import invoiceReducer from './features/invoiceSlice'
+
 export const store = configureStore({
-  reducer: {},
+  reducer: {
+    invoiceReducer
+  },
   devTools: process.env.NODE_ENV !== 'production'
 })
 

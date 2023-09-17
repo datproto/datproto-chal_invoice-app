@@ -11,8 +11,8 @@ const Navbar = () => {
   const {theme, setTheme} = useTheme()
 
   return (
-    <div
-      className="flex w-full items-center justify-between bg-[#373B53] dark:bg-clay-theme-ebony-dark-2 2xl:fixed 2xl:h-full 2xl:w-24 2xl:flex-col 2xl:rounded-r-3xl">
+    <header
+      className="fixed flex w-full items-center justify-between bg-[#373B53] dark:bg-clay-theme-ebony-dark-2 2xl:h-full 2xl:w-24 2xl:flex-col 2xl:rounded-r-3xl">
       <Logo
         customClass="h-[72px] md:h-20 2xl:w-full 2xl:h-auto"
       />
@@ -36,7 +36,7 @@ const Navbar = () => {
           <Avatar imgUrl="https://i.pravatar.cc/"/>
         </div>
       </div>
-    </div>
+    </header>
   )
 }
 
